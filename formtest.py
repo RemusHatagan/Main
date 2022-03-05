@@ -15,4 +15,5 @@ while fName and lName and gender and schoolForm:\
         fileFormat == forms,".",'\n'.join(form)
         file.write(fileFormat)
         file.close()
-    
+        
+# CODE SHOULD NOT BE USED
