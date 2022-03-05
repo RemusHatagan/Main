@@ -1,3 +1,5 @@
+# Requires a signup.txt file in order to work
+
 def main():
     sentry = True
     forms = 0
