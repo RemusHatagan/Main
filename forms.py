@@ -1,4 +1,4 @@
-# Requires a signup.txt file in order to work
+# Requires a signup.txt file in the same folder as the code in order to work.
 
 def main():
     sentry = True
