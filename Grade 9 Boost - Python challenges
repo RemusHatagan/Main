@@ -1,0 +1,459 @@
+# Grade 9 Boost - Python challenges
+# Challenge 1
+
+age = int(input("What is your age? >>>"))
+print("Your age is:",age)
+
+
+# Challenge 2
+
+num1 = int(input("What is the first number? >>> "))
+num2 = int(input("What is the second number? >>> "))
+sum = num1 + num2
+avg = sum / 2
+print("The average of the two numbers is :",avg)
+
+# Challenge 3
+
+width = float(input("What is the width of your rectangle? (CM) >>>"))
+height = float(input("What is the height of your rectangle? (CM) >>>"))
+area = width * height
+print("Your rectangle's area is :",area,"cm.")
+
+# Challenge 4
+
+dividend = float(input("What is the dividend? >>>"))
+divisor = float(input("What is the divisor? >>>"))
+quotient = dividend / divisor
+print(dividend,"/",divisor,"=",quotient)
+
+# Challenge 5
+
+name = input("What is your name? >>>")
+subject = input("What is your favourite subject " + name + "?")
+print("I like that subject as well!")
+
+
+
+
+# Challenge 6
+
+name = input("What is your name? >>>")
+myname = "Remus"
+if name == myname:
+  print("You're cool!")
+else:
+  print("Nice to meet you!")
+
+# Challenge 7
+
+time = float(input("On average how much time do you spend watching TV each day? <-
+ (Hours)”)) <-
+if time <= 2:
+  print("That shouldn't rot your brain too much.")
+elif time <= 4 and time > 2:
+  print("Aren't you getting square eyes?")
+elif time > 4:
+  print("Fresh air beats channel flicking.")
+
+
+
+# Challenge 8
+
+
+marks = int(input("How many marks did you get on your test? (out of 100)"))
+grade = "invalid"
+if marks >= 75:
+  grade = "A"
+  print("You got an A in your test!")
+elif marks >= 60:
+  grade = "B"
+  print("You got a B in your test!")
+elif marks >= 35:
+  grade = "C"
+  print("You got a C in your test!")
+elif marks <35:
+  grade = "D"
+  print("You got a D in your test!")
+
+
+# Challenge 9
+
+values = ["respect","excellence","friendship"]
+response = input("Name one of the Olympic Values >>>")
+if response in values:
+  print("That's correct")
+else:
+  print("Try again")
+
+
+# Challenge 10
+
+import random
+def main():
+  print("")
+  print ("----ROCK, PAPER, SCISSORS----")
+  AIchoice = random.choice(["rock","paper","scissors"])
+  choice = input("Do you choose rock, paper or scissors?")
+  if AIchoice == "rock" and choice == "rock":
+    print("Robot has chosen",AIchoice,", and so did you! Therefore it's a DRAW!")
+    main()
+  elif AIchoice == "rock" and choice == "paper":
+    print("Robot has chosen",AIchoice,", you chose",choice,"! Therefore you WIN!")
+    main()
+  elif AIchoice == "rock" and choice == "scissors":
+    print("Robot has chosen",AIchoice,"and you chose",choice,"! Therefore you LOSE!")
+    main()
+  if AIchoice == "paper" and choice == "paper":
+    print("Robot has chosen",AIchoice,", and so did you! Therefore it's a DRAW!")
+    main()
+  elif AIchoice == "paper" and choice == "scissors":
+    print("Robot has chosen",AIchoice,", you chose",choice,"! Therefore you WIN!")
+    main()
+  elif AIchoice == "paper" and choice == "rock":
+    print("Robot has chosen",AIchoice,"and you chose",choice,"! Therefore you LOSE!")
+    main()
+  if AIchoice == "scissors" and choice == "scissors":
+    print("Robot has chosen",AIchoice,", and so did you! Therefore it's a DRAW!")
+    main()
+  elif AIchoice == "scissors" and choice == "rock":
+    print("Robot has chosen",AIchoice,", you chose",choice,"! Therefore you WIN!")
+    main()
+  elif AIchoice == "scissors" and choice == "paper":
+    print("Robot has chosen",AIchoice,"and you chose",choice,"! Therefore you LOSE!")
+    main()
+main()
+
+
+
+# Challenge 11
+
+sentence = str(input("Please enter a sentence >>>"))
+characters = len(sentence)
+print("The amount of characters in your sentence is:",characters)
+
+
+# Challenge 12
+
+sentence = str(input("Please enter a sentence >>>"))
+yelling_sentence = sentence.upper()
+print(yelling_sentence)
+
+# Challenge 13
+
+sentence = input("Please enter a sentence >>>")
+target = input("What word do you wish to replace? >>>")
+replace = input("What word do you wish to replace it with? >>>")
+ 
+# sentence = coding in java is fun, java is awesome
+# target = java
+# replace = python
+ 
+location = sentence.find(target)
+ 
+if location != -1:
+  while (location != -1):
+    s_sentence = sentence[0:location] # string slicing
+    s_sentence = s_sentence + replace # s_sentence = "coding in python"
+    s_sentence = s_sentence + sentence[location+len(target):]
+    sentence = s_sentence
+    location = sentence.find(target,location+1,len(sentence))
+else:
+  print("The word doesn't exist.")
+ 
+print(s_sentence)
+
+
+
+
+# Challenge 14
+
+sentence = input("Please enter your sentence here >>>")
+target = sentence.count("the ")
+target2 = sentence.count("The ")
+target3 = sentence.count("THE ")
+total = target + target2 + target3
+print("The total amount of times there has been said `The`, `the` or `THE` is",total,".")
+
+# Challenge 15
+
+sentence = input("Please enter your sentence here >>>")
+low_sentence = sentence.lower()
+print(low_sentence)
+
+# Challenge 16
+for i in range(11):
+    if i >0:
+      print(i)
+
+# Challenge 17
+
+for i in range(2,100,2):
+    print(i+1)    
+
+
+# Challenge 18
+
+number=int(input("Please enter your number >>>"))
+for i in range(101):
+    print(i*number)  
+
+# Challenge 19
+
+def main():
+    number=int(input("Please enter your number >>>"))
+    for i in range(21):
+      print(i*number)
+    main()  
+main()
+
+# Challenge 20
+
+
+def main():
+    number = 7
+    guess = int(input("Guess a number between 1 and 10 >>>"))
+    if guess == number:
+        print("Good job!")
+    else:
+        print("That's wrong!")
+        main()  
+main()
+
+# Challenge 21
+
+import time
+ 
+def convertToCM(inches):
+    conversion2 = inches * 2.54
+    print(inches,"is equal to",conversion2,"CM")
+   
+def convertToINCH(centimetres):
+    conversion = centimetres / 2.54
+    print(centimetres,"is equal to",conversion,"CM")
+   
+time.sleep(0.2)
+unit = input("Do you wish to convert from cm or inch? (CM / INCH) >>> ")
+ 
+if unit == "CM":
+    centimetres = float(input("How many centimetres do you wish to convert into inches? >>> "))
+    time.sleep(0.5)
+    print("Calculating your conversion... Please wait...")
+    convertTo INCH(centimetres)
+ 
+elif unit == "INCH":
+    inches = float(input("How many inches do you wish to convert into centimetres? >>> "))
+    time.sleep(0.5)
+    print("Calculating your conversion... Please wait...")
+    convertToCM(inches)
+
+# Challenge 22
+
+
+def calculate(distance,time):
+    speed=distance/time
+    print("The average speed is:",speed,"m/s")
+    return
+distance=float(input("Please enter the distance travelled (metres) >>> "))
+time=float(input("Please enter the time taken to travel that distance (seconds) >>> "))
+calculate(distance,time)
+
+# Challenge 23
+
+rWidth=float(input(“What is the width of your rectangle?(metres)>>”))
+rLength=float(input(“What is the length of your rectangle?(metres)>>”))
+rArea = rWidth * rLength
+cRadius = float(input(“What is the radius of the circle? (metres)>>>”))
+cRadiusSq = cRadius * cRadius
+cArea = 3.14 * cRadiusSq
+turfArea = rArea - cArea
+print(“The amount of metres of turf needed is”,turfArea,”metres.”)
+
+
+# Challenge 24
+
+def drawLine(s,x):
+    for i in range(0,s):
+        print("  ", end=""),
+    for i in range(0,x):
+        print("X",end=""),
+    print()
+    return
+def drawPicture():
+    drawLine(5,1)
+    drawLine(4,3)
+    drawLine(3,5)
+    drawLine(2,7)
+    drawLine(1,9)
+    drawLine(4,3)
+    drawLine(4,3)
+    return
+drawPicture()
+
+# Challenge 25
+
+# Requires a signup.txt file in the same folder as the code in order to work.
+ 
+def main():
+    sentry = True
+    forms = 0
+    while sentry == True:
+        print("\u0332".join("WELCOME TO THE SIGN UPS FOR THE CLUB"))
+        print("")
+       
+        fName = input("Please enter your first name >>> ")
+        lName = input("Please enter your last name >>> ")
+        gender = input("Please enter your gender >>> ")
+        schoolForm = input("Please enter your full form name >>> ")
+ 
+        file = open("signup.txt","a")
+        if fName and lName and gender and schoolForm:
+            form = ['\n',forms,".",'  First name: '+fName , '\n'
+                    '   Last name: ' + lName , '\n'
+                    '   Gender: ' +gender , '\n'
+                    '   Form: ' +schoolForm , '\n'
+                    ]
+            for i in form:
+                with open("signup.txt","a") as file:
+                    file.write(str(i))
+                    file.close()
+       
+        redo = input("Do you wish to input another form? (Y/N) >>> ").upper()
+        if redo == "Y":
+            forms = forms + 1
+        else:
+            exit()
+main()
+
+
+# Challenge 26
+
+# Requires a scores.txt file in the same folder as the code in order to work.
+import time
+def main():
+    score = 0
+    time.sleep(0.4)
+    print("\u0332".join("WELCOME TO THE FUN TIME MATHS QUIZ"))
+    print("")
+    print("!!! PLEASE ANSWER WITH THE LETTER OR THE ANSWER AS SHOWN !!!")
+    print("")
+   
+    time.sleep(0.2)
+    playerName = str(input("Please enter your name >>> "))
+   
+    time.sleep(0.3)
+    question1 = str(input("What is 3 to the third power? [(a) 9, (b) 81, (c) 27, (d) 3] >>> ")).lower()
+    print(question1)
+    if question1 == "c" or question1 == "27":
+        question1Right = True
+        score = score + 1
+        print("Correct!")
+    else:
+        print("Wrong")
+   
+    time.sleep(0.3)
+    question2 = str(input("What is the square root of 196 ? [(a) 13, (b) 14, (c) 13.7, (d) None of the above] >>> ")).lower()
+    print(question2)
+    if question2 == "b" or question2 == "14":
+        question2Right = True
+        score = score + 1
+        print("Correct!")
+    else:
+        print("Wrong!")
+   
+    time.sleep(0.3)
+    question3 = str(input("What is the correct formula for the area of a trapezium? [(a) (a+b)/2 * h, (b) 1/2*(b*h), (c) l*w, (d) l^2] >>> ")).lower()
+    print(question3)
+    if question3 == "a" or question3 == "(a+b)/2 * h":
+        question3Right = True
+        score = score + 1
+        print("Correct!")
+    else:
+        print("Wrong!")
+   
+    print("Good job ",playerName,"! You scored ",score," point(s) out of 3!")
+   
+    file = open("scores.txt","a")
+    if question1 and question2 and question3:
+        playerScore = ['\n',playerName," > ",score , " point(s) out of 3." '\n']
+        for i in playerScore:
+            with open("scores.txt","a") as file:
+                file.write(str(i))
+                file.close()
+   
+    redo = input("Do you wish to play again? (Y/N) >>> ").upper()
+    if redo == "Y":
+        main()
+    else:
+        exit()
+main()
+
+# Challenge 27
+
+# Requires a scores.txt file in the same folder as the code in order to work.
+import time
+ 
+def main():
+    score = 0
+    time.sleep(0.4)
+    print("\u0332".join("WELCOME TO THE FUN TIME MATHS QUIZ"))
+    print("")
+    print("!!! PLEASE ANSWER WITH THE LETTER OR THE ANSWER AS SHOWN !!!")
+    print("")
+    time.sleep(0.2)
+    playerName = str(input("Please enter your name >>> "))
+   
+    time.sleep(0.3)
+    question1 = str(input("What is 3 to the third power? [(a) 9, (b) 81, (c) 27, (d) 3] >>> ")).lower()
+    print(question1)
+    if question1 == "c" or question1 == "27":
+        question1Right = True
+        score = score + 1
+        print("Correct!")
+    else:
+        print("Wrong")
+    time.sleep(0.3)
+   
+    question2 = str(input("What is the square root of 196 ? [(a) 13, (b) 14, (c) 13.7, (d) None of the above] >>> ")).lower()
+    print(question2)
+    if question2 == "b" or question2 == "14":
+        question2Right = True
+        score = score + 1
+        print("Correct!")
+    else:
+        print("Wrong!")
+    time.sleep(0.3)
+   
+    question3 = str(input("What is the correct formula for the area of a trapezium? [(a) (a+b)/2 * h, (b) 1/2*(b*h), (c) l*w, (d) l^2] >>> ")).lower()
+    print(question3)
+    if question3 == "a" or question3 == "(a+b)/2 * h":
+        question3Right = True
+        score = score + 1
+        print("Correct!")
+    else:
+        print("Wrong!")
+    print("Good job ",playerName,"! You scored ",score," point(s) out of 3!")  
+   
+    file = open("scores.txt","a")
+    if question1 and question2 and question3:
+        playerScore = ['\n',playerName," > ",score , " point(s) out of 3." '\n']
+        for i in playerScore:
+            with open("scores.txt","a") as file:
+                file.write(str(i))
+                file.close()    
+               
+    fileOpen = open("scores.txt","r")
+    print("Others scores players achieved :")
+    print("")
+    for line in fileOpen:
+        print(line)
+   
+   
+    redo = input("Do you wish to play again? (Y/N) >>> ").upper()
+   
+    if redo == "Y":
+        main()
+    else:
+        exit()
+   
+main()
