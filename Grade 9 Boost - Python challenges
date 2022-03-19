@@ -474,17 +474,29 @@ print(name)
 
 # Challenge 29
 
-checklist = []
+print("")
+
+packList = []
 tasks = []
 
-destination = str(input("Enter the name of the destination >>> "))
-items = int(input("Enter the number of items you need to pack >>> "))
-tasks = int(input("Enter the number of tasks you need to complete >>> "))
+destination = input("Enter the destination of the holiday >>> ")
+itemsNum = int(input("Enter the number of items you need to pack >>> "))
+tasksNum = int(input("How many tasks do you need to complete to prepare for the holiday? >>> "))
 
-for i in range(0,items):
-    checklist.append(input("Enter the name of item "+str(i+1)+">>> "))
+for i in range(0,itemsNum):
+    packList.append(input("Enter the name of item "+str(i+1)+" >>> "))
 
-for i in range(0,tasks):
-    tasks.append(input("Enter task "+str(i+1)+">>> "))
+for i in range(0,tasksNum):
+    tasks.append(input("Enter task "+str(i+1)+" >>> "))
 
-file = open((name+"checklist.txt"), "w")
+file = open((destination+" checklist.txt"), "w")
+file.write("Destination >>> "+destination+'\n'+"\nPacking List >>> "+'\n')
+for item in packList:
+    file.write(item+'\n')
+file.write('\n'+"Tasks >>> "+'\n')
+for item in tasks:
+    file.write(item+"\n")
+file.close()
+print("List Saved Succesfully.")
+
+# Challenge 30
