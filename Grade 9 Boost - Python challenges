@@ -94,7 +94,7 @@ def main():
   print("")
   print ("----ROCK, PAPER, SCISSORS----")
   AIchoice = random.choice(["rock","paper","scissors"])
-  choice = input("Do you choose rock, paper or scissors?")
+  choice = input("Do you choose rock, paper or scissors? >>> ").lower()
   if AIchoice == "rock" and choice == "rock":
     print("Robot has chosen",AIchoice,", and so did you! Therefore it's a DRAW!")
     main()
